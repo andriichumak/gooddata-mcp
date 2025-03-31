@@ -1,0 +1,43 @@
+{
+  "name": "gooddata-mcp",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "bin": {
+    "gooddata-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andriichumak/gooddata-mcp.git"
+  },
+  "author": "",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/andriichumak/gooddata-mcp/issues"
+  },
+  "homepage": "https://github.com/andriichumak/gooddata-mcp#readme",
+  "description": "",
+  "dependencies": {
+    "@gooddata/sdk-backend-spi": "^10.23.0",
+    "@gooddata/sdk-backend-tiger": "^10.23.0",
+    "@gooddata/sdk-model": "^10.23.0",
+    "@hyzyla/pdfium": "^2.1.5",
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "dotenv": "^16.4.7",
+    "node-fetch": "^3.3.2",
+    "sharp": "^0.33.5",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.14",
+    "typescript": "^5.8.2"
+  }
+}
