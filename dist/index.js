@@ -127,11 +127,11 @@ server.tool("visualization_png_export", "Export a visualization to image", { vis
     };
 });
 server.tool("visualization_schedule", "Schedule a visualization export over email." +
-    "Make sure you are using 6 digit cron expression in UTC timezone.", {
+    "Cron format must be: SECOND MINUTE HOUR DAY-OF-MONTH MONTH DAY-OF-WEEK", {
     visualizationId: z.string(),
     email: z.string(),
     cron: z.string({
-        description: "6-digit cron expression, in UTC timezone",
+        description: "Cron format must be: SECOND MINUTE HOUR DAY-OF-MONTH MONTH DAY-OF-WEEK",
     }),
 }, async ({ visualizationId, email, cron }) => {
     const automationId = `automation-${Date.now()}`;
