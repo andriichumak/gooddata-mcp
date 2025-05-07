@@ -126,12 +126,13 @@ server.tool("visualization_png_export", "Export a visualization to image", { vis
         })),
     };
 });
-server.tool("visualization_schedule", "Schedule a visualization export over email." +
-    "Cron format must be: SECOND MINUTE HOUR DAY-OF-MONTH MONTH DAY-OF-WEEK", {
+server.tool("visualization_schedule", "Schedule a visualization export over email.\n" +
+    "Cron format must be: SECOND MINUTE HOUR DAY-OF-MONTH MONTH DAY-OF-WEEK\n" +
+    "For example, every Monday at 9am would be: 0 0 9 * * MON", {
     visualizationId: z.string(),
     email: z.string(),
     cron: z.string({
-        description: "Cron format must be: SECOND MINUTE HOUR DAY-OF-MONTH MONTH DAY-OF-WEEK",
+        description: "Cron in format 0 0 9 * * MON",
     }),
 }, async ({ visualizationId, email, cron }) => {
     const automationId = `automation-${Date.now()}`;
